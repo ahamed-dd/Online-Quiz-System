@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Home</title>
+</head>
+<body>
+    <h1>Welcome to the Quiz Portal</h1>
+
+    <h3>Choose an option:</h3>
+    <ul>
+        <li><a href="/quiz">Take a Quiz</a></li>
+        <li><a href="/add_question">Add a Question</a></li>
+    </ul>
+
+    <form action="/quiz" method="POST">
+        <label>Enter your name to start quiz:</label>
+        <input type="text" name="name" required>
+        <button type="submit">Start Quiz</button>
+    </form>
+</body>
+</html>

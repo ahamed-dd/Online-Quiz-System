@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+</head>
+<body>
+    <h2>Hello, {{ name }}! Answer the following questions:</h2>
+    <form action="/submit" method="POST">
+        <input type="hidden" name="name" value="{{ name }}">
+        
+        {% for q in questions %}
+            <p><b>{{ loop.index }}. {{ q[1] }}</b></p>
+            <input type="radio" name="{{ q[0] }}" value="{{ q[2] }}" required> a. {{ q[2] }} <br>
+            <input type="radio" name="{{ q[0] }}" value="{{ q[3] }}"> b. {{ q[3] }} <br>
+            <input type="radio" name="{{ q[0] }}" value="{{ q[4] }}"> c. {{ q[4] }} <br>
+            <input type="radio" name="{{ q[0] }}" value="{{ q[5] }}"> d. {{ q[5] }} <br>
+            <hr>
+        {% endfor %}
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

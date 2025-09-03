@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Result</title>
+</head>
+<body>
+    <h2>Hi {{ name }}, your score is {{ score }}</h2>
+
+    {% if wrong %}
+        <h3>Incorrect Answers:</h3>
+        <ul>
+        {% for q, ans in wrong.items() %}
+            <li><b>{{ q }}</b> → Correct Answer: {{ ans }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>🎉 Congratulations! You got everything correct!</p>
+    {% endif %}
+
+    <a href="/">Go Home</a>
+</body>
+</html>
